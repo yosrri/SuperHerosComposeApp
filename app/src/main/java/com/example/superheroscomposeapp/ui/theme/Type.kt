@@ -13,10 +13,17 @@ val Cabin = FontFamily(
     Font(R.font.cabin_bold)
 )
 val Typography = Typography(
+    bodyLarge = TextStyle(
+        fontFamily = Cabin,
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp,
+        lineHeight = 24.sp,
+        letterSpacing = 0.5.sp
+    ),
     displayLarge = TextStyle(
         fontFamily = Cabin,
         fontWeight = FontWeight.Normal,
-        fontSize = 36.sp
+        fontSize = 30.sp
     ),
     displayMedium = TextStyle(
         fontFamily = Cabin,
@@ -26,15 +33,8 @@ val Typography = Typography(
     labelSmall = TextStyle(
         fontFamily = Cabin,
         fontWeight = FontWeight.Bold,
-        fontSize = 14.sp
+        fontSize = 20.sp
     ),
-    bodyLarge = TextStyle(
-        fontFamily = Cabin,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    )
     /* Other default text styles to override
     titleLarge = TextStyle(
         fontFamily = FontFamily.Default,
