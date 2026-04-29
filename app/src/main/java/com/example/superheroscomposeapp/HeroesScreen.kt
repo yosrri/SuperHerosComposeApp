@@ -30,6 +30,19 @@ import com.example.superheroscomposeapp.model.HeroModel
 import com.example.superheroscomposeapp.ui.theme.SuperHeroesComposeAppTheme
 
 @Composable
+fun HeroList(
+    items: List<HeroModel>,
+    modifier: Modifier = Modifier,
+    contentPadding: PaddingValues = PaddingValues(0.dp)
+) {
+    LazyColumn(modifier = modifier, contentPadding = contentPadding) {
+        items(items) { item ->
+            ListItem(item)
+        }
+    }
+}
+
+@Composable
 fun ListItem(item: HeroModel, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
@@ -85,3 +98,12 @@ private fun ListItemPreview() {
     }
 }
 
+@Preview("Heroes List", showBackground = true)
+@Composable
+private fun HeroesScreenPreview() {
+    SuperHeroesComposeAppTheme {
+        HeroList(
+            items = HeroesRepository.heroes,
+        )
+    }
+}
