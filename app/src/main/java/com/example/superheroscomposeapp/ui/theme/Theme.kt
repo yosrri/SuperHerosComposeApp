@@ -273,6 +273,6 @@ fun SuperHeroesComposeAppTheme(
         colorScheme = colorScheme,
         typography = Typography,
         content = content,
-        shapes = shape
+        shapes = Shapes
     )
 }
